@@ -1,0 +1,21 @@
+
+.desktop {
+  .main-menu-courses {
+    ul {
+      column-count: 4;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
+
+
+.mobile {
+  .courses-sliding-menu,
+  .programs-sliding-menu {
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+  }
+}

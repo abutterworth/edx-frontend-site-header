@@ -1,0 +1,65 @@
+.site-header.desktop {
+
+  .nav-container {
+    // serve as relative parent for menu-contents
+    position: relative;
+  }
+
+  .brand {
+    a {
+      display: block;
+      // Match padding with nav-links
+      padding: 1rem 1rem 1rem 1rem;
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .primary-menu-container {
+    .menu {
+      position: static;
+      .menu-content {
+        border-top: solid 1px $component-active-bg;
+        left: 0;
+        right: 0;
+      }
+    }
+    .nav-link {
+      padding: 1rem;
+      &:hover,
+      &:focus,
+      &.active {
+        background: $component-active-bg;
+        color: $component-active-color;
+      }
+    }
+  }
+
+  .secondary-menu-container {
+    .menu {
+      .menu-content {
+        left: auto;
+        right: 0;
+        width: 20rem;
+        margin-top: $spacer;
+        border-radius: $border-radius;
+        box-shadow: $dropdown-box-shadow;
+      }
+    }
+  }
+
+  .search-field {
+    // display: none;
+  }
+
+  .form-control {
+    min-width: 15rem;
+  }
+  
+  .nav-link svg,
+  .btn svg {
+    height: .75em;
+    margin-bottom: .05em;
+  }
+}

@@ -1,0 +1,92 @@
+.overlay-panel-menu {
+  & > .menu-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    overflow: hidden;
+    background: transparent;
+    box-shadow: none;
+
+    & > .menu-content-container {
+      padding: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      background:#fff;
+      bottom: 0;
+      width: calc(100vw - 50px);
+      overflow: auto;
+      box-shadow: none;
+      transition: all .5s ease;
+    }
+
+    .overlay-close {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.75);
+      border: none;
+      // opacity: 0;
+      transition: all .5s ease;
+      span {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50px;
+        bottom: 0;
+        padding-top: 12px;
+        color: $white;
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+
+    &.overlay-panel-enter {
+      & > .menu-content-container {
+        transform: translateX(-100%);
+      }
+      .overlay-close {
+        opacity: 0.01;
+      }
+    }
+    &.overlay-panel-enter-active {
+      & > .menu-content-container {
+        transform: translateX(0%);
+        transition: transform 300ms ease-out;
+      }
+      .overlay-close {
+        opacity: 1;
+        transition: opacity 300ms linear;
+      }
+    }
+
+    &.overlay-panel-exit {
+      & > .menu-content-container {
+        transform: translateX(0%);
+      }
+      .overlay-close {
+        opacity: 1;
+      }
+    }
+    &.overlay-panel-exit-active {
+      & > .menu-content-container {
+        transform: translateX(-100%);
+        transition: transform 300ms ease-out;
+      }
+      .overlay-close {
+        opacity: 0;
+        transition: opacity 300ms linear;
+      }
+    }
+  }
+}
