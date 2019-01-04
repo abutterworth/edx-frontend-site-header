@@ -87,3 +87,38 @@ export const MENU_ITEMS = [
     destination: "#"
   }
 ]
+
+
+export const SECONDARY_MENU_ITEMS = [
+  // {
+  //   content: "Sign in",
+  //   triggerClassName: "btn-link",
+  //   name: "sign-in",
+  //   destination: "#",
+  // },
+  // {
+  //   content: "Register",
+  //   triggerClassName: "btn-primary",
+  //   name: "register",
+  //   destination: "#",
+  // },
+  {
+    content: (<span>My Account</span>),
+    triggerClassName: "btn-outline-secondary",
+    name: "account",
+    submenu: (
+      <div>
+      <a className="btn btn-primary btn-block mt-2 mb-3" href="#">Resume my last course</a>
+      <ul className="nav flex-column">
+        <li className="nav-item"><a className="nav-link" href="#">My Dashboard</a></li>
+        <li className="nav-item"><a className="nav-link" href="#">My Courses</a></li>
+        <li className="nav-item"><a className="nav-link" href="#">My Programs</a></li>
+        <li className="nav-item"><a className="nav-link" href="#">Help</a></li>
+        <li className="nav-item"><a className="nav-link" href="#">My Profile</a></li>
+        <li className="nav-item"><a className="nav-link" href="#">Account Settings</a></li>
+        <li className="nav-item"><a className="nav-link" href="#">Sign Out</a></li>
+      </ul>
+      </div>
+    )
+  },
+]
